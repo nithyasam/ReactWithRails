@@ -1,0 +1,2 @@
+class MenuListsController < ApplicationController
+end

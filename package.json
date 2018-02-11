@@ -1,5 +1,7 @@
 {
   "name": "MenuCreater",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.17.1"
+  }
 }

@@ -14,7 +14,6 @@ class MenuListsController < ApplicationController
   end
 
   def main
-    index
   end
 
   private

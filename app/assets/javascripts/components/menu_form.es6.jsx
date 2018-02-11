@@ -5,13 +5,25 @@ class MenuForm extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.authenticityToken = (document.querySelector('meta[name="csrf-token"]') || {}).content;
     }
+
     handleChange(event) {
         this.setState({[event.target.name]: event.target.value});
     }
 
     handleSubmit(event) {
         event.preventDefault();
+        axios({
+            method: 'POST',
+            url: '/menu_lists',
+            data: {menu: this.state},
+            headers: {'X-CSRF-Token': this.authenticityToken}
+        }).then(function(response) {
+                console.log("response");
+                console.log(response);
+            }
+    )
     }
 
     render () {

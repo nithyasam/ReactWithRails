@@ -18,4 +18,5 @@
 //= require_tree .
 //= require_jquery
 //= require bootstrap-sprockets
+//= require axios
 

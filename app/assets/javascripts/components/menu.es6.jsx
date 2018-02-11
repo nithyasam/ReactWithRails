@@ -15,7 +15,7 @@ class Menu extends React.Component {
                     <tbody>
                     {this.props.data.map(item => {
                         return (
-                            <tr key={item.name}>
+                            <tr key={item.id}>
                                 <td style={{border: "1px solid black"}}>{item.date}</td>
                                 <td style={{border: "1px solid black"}}>{item.name}</td>
                                 <td style={{border: "1px solid black"}}>{item.isPresent.toString()}</td>

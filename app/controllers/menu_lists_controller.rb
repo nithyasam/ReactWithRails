@@ -13,6 +13,10 @@ class MenuListsController < ApplicationController
     @menu_lists = MenuList.all
   end
 
+  def main
+    index
+  end
+
   private
   def menu_params
     params.require(:menu).permit(:date, :name, :isPresent, :price)
